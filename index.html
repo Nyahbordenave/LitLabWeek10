@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit Log: Your Virtual BookShelf</title>
+
+    <!-- setting up a style for the headers of my webpage-- -->
+    <style> 
+        .container {
+            margin-top: 20px;
+        }
+
+        /* Increase the width of the table */
+        #list {
+            width: 100%;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+    
+    <!-- // referncing the style that I created earlier so hearders can be centered-->
+    <h1 class="center-text">Welcome to Lit Log! </h1> 
+    <h3 class="center-text">Your Virtual Bookshelf</h3>
+    <br>
+    <!-- creating a container and card, so user input is cohesive-->
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="title-of-book">Title of Book</label>
+                            <input type="text" class="form-control" id="title-of-book">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="author-of-book">Author's Name</label>
+                            <input type="text" class="form-control" id="author-of-book">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="date-read">Date</label>
+                            <input type="date" class="form-control" id="date-read">
+                        </div>
+                    </div>
+                    <div class="col-xl">
+                        <div class="form-group">
+                            <label for="synopsis">Brief Synopsis</label>
+                            <input type="text" class="form-control" id="synopsis">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="rating">Overall Rating</label>
+                            <input type="number" class="form-control" id="rating" min="1" max="10">
+                        </div>
+                    </div>
+                </div>
+                    <!-- created a button, where user information can be added to a table-->
+                <div class="row">
+                    <div class="col-sm-2">
+                        <br>
+                        <button id="add" class="btn btn-primary form-control">Add to Library</button>
+
+                    </div>
+                </div>
+                    <!-- created a table so user responses will be recorded here, will be able to review information that was input-->
+                <div class="table-responsive">
+                    <table id="list" class="table table-light">
+                        <thead>
+                            <tr>
+                                <th>Title of Book</th>
+                                <th>Author's Name</th>
+                                <th>Date</th>
+                                <th>Brief Synopsis</th>
+                                <th>Overall Rating</th>
+                    
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                   </div>
+                </div>
+        </div>
+    </div>
+
+
+   
+</body>
+</html>
